@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <title>Menu Electronico Para Tu Restaurante</title>
+</head>
+<body>
+  <div class="py-12 bg-white">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <p class="m-20 text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Transacciones seguras e higienicas</p>
+        <h3 class="mt-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+          Muestra la carta de tu restaurante desde el movil del cliente
+        </h3>
+        <p class="mt-16 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
+          Prepara a tu restaurante para mostrar tus mejores platos con la maxima seguridad higienica y sin poner en riesgo la salud de tus trabajadores ni clientes.
+        </p>
+        <h5 class="mt-20 text-xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-3xl sm:leading-10">
+          Como funciona
+        </h5>
+      </div>
+  
+      <div class="my-20">
+        <ul class="md:grid md:grid-cols-3 md:col-gap-8 md:row-gap-10">
+          <li>
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h5 class="text-lg leading-6 font-medium text-gray-900">1 - Codigo QR</h5>
+                <p class="mt-2 text-base leading-6 text-gray-500">
+                  En cada mesa se encuentra un codigo QR. El cliente lo escanea con su movil y se muestra el menu.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="mt-10 md:mt-0">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h5 class="text-lg leading-6 font-medium text-gray-900">2 - Seleciona el pedido</h5>
+                <p class="mt-2 text-base leading-6 text-gray-500">
+                  El cliente seleciona el pedido a traves de la applicacion y se comunica directamente con la cocina para su preparacion
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="mt-10 md:mt-0">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h5 class="text-lg leading-6 font-medium text-gray-900">3 - Paga</h5>
+                <p class="mt-2 text-base leading-6 text-gray-500">
+                  El cliente paga directamente desde su dispositivo evitando asi el intercambio de dinero fisico entre las partes
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="formTitle" class="text-center">
+        <h5 class="mt-20 text-xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-3xl sm:leading-10">
+          Te interesa
+        </h5>
+        <p class="mt-10 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
+          Rellena este formulario y nos pondremos en contacto contigo para proporcionarte mas detalles
+        </p>
+      </div>
+      <div class="w-full max-w-xs pt-16 mx-auto">
+        <form name="restaurant-menu-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 nonvalidate">
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2 capitalize" for="nombre">
+              nombre
+            </label>
+            <input name="nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nombre" type="text" placeholder="Chicote">
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2 capitalize" for="restaurante">
+              restaurante
+            </label>
+            <input name="restaurante" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="restaurante" type="text" placeholder="Yakitoro">
+          </div>
+          <div class="mb-6" x-data="{ isValid: true }">
+            <label class="block text-gray-700 text-sm font-bold mb-2 capitalize" for="email">
+              email
+            </label>
+            <input  
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+              id="email" name="email" type="email" placeholder="hola@restaurante.com" required
+              @focusout="isValid = email.checkValidity()"
+              :class="{ 'border-red-500' : !isValid }"
+            >
+            <p
+              x-show="!isValid"       
+              class="pt-2 text-red-500 text-xs italic">Por favor intoduce un email valido.
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline" type="submit">
+              Enviar
+            </button>
+          </div>
+        </form>
+        <div id="gracias" class="text-center hidden">
+          <h5 class="text-xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-3xl sm:leading-10">
+            Muchas Gracias
+          </h5>
+          <p class="mt-10 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
+            Pronto nos pondremos en contacto contigo para mostrarte nuestro producto 
+          </p>
+        </div>
+        <p class="text-center text-gray-500 text-xs pt-10">
+          &copy;2020 JMG Corp. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxdegWL6dmCGPvVOxhke04h4oi_PkIIdCj7b32OyenvFGuxbJoP/exec'
+  const form = document.forms['restaurant-menu-form']
+  const formTitle = document.querySelector('#formTitle')
+  const thankYou = document.querySelector('#gracias')
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        form.classList.add('hidden')
+        formTitle.classList.add('hidden')
+        thankYou.classList.remove('hidden')
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</html>
+
+
